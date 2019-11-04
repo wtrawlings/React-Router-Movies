@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 const MovieList = props => {
   const [movies, setMovies] = useState([])
@@ -8,6 +9,7 @@ const MovieList = props => {
       axios
         .get('http://localhost:5000/api/movies')
         .then(response => {
+          console.log(response.data)
           setMovies(response.data);
         })
         .catch(error => {
@@ -30,6 +32,7 @@ const MovieList = props => {
 function MovieDetails({ movie }) {
   const { title, director, metascore, stars } = movie;
   return (
+    <Link to={`/movies/${movie.id}`} >
     <div className="movie-card">
       <h2>{title}</h2>
       <div className="movie-director">
@@ -46,6 +49,7 @@ function MovieDetails({ movie }) {
         </div>
       ))}
     </div>
+    </Link>
   );
 }
 
