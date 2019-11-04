@@ -13,7 +13,6 @@ const SavedList = props => {
     <Link to="/">
     <div className="home-button">Home</div>
     </Link>
-    console.log(props)
 
   </div>
 )};
