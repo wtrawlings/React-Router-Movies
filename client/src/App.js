@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <div>
-      <SavedList list={savedList} />
+      <SavedList list={savedList} name="warren" />
       <Route exact path="/movies/:id" render={(props) => <Movie {...props} addToSavedList={addToSavedList}/>} />
       <Route exact path="/" component={MovieList} />
     </div>
