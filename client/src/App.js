@@ -10,6 +10,7 @@ const App = () => {
 
   const addToSavedList = movie => {
     setSavedList( [...savedList, movie] );
+    //what is that thing before savedList? DEstructuring?
   };
 
   return (
