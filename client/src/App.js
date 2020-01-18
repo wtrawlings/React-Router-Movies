@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 //for some reason removing Router from the import messes up the mapping of the data
 import MovieList from "./Movies/MovieList";
 import Movie from "./Movies/Movie";
